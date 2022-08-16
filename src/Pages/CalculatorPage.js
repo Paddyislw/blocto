@@ -9,7 +9,7 @@ export default function CalculatorPage() {
     const data = useSelector(selectval)
     const load = useSelector(selectloading)
     const dispatch = useDispatch()
-    const [valueCurr, setValueCurr] = useState(null)
+    const [valueCurr, setValueCurr] = useState('')
     const [currency, setCurrency] = useState('')
     const [loading, setloading] = useState(true)
 
@@ -30,10 +30,10 @@ export default function CalculatorPage() {
             <div className='bg-gray-500 w-[380px] h-[400px] rounded-[20px] flex-col flex px-10 py-10'>
                 <p className='text-gray-800 font-semibold text-2xl mb-2'>Currency</p>
                 <select onChange={(e) => { setCurrency(e.target.value) }} className='  bg-gray-400 py-3 rounded px-1 text-gray-800 focus:outline-none mb-4'>
-                    <option selected >Open menu</option>
-                    {dataOfCurr.map((e) => {
+                    <option>Open menu</option>
+                    {dataOfCurr.map((e,i) => {
                         return (
-                            <option value={e.name}>{e.name}</option>
+                            <option value={e.name} key={i}>{e.name}</option>
                         )
                     })}
                 </select>

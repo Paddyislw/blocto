@@ -30,5 +30,5 @@ export const calculatorSlice = createSlice({
     }
 })
 
-export const selectval = (state)=>state.val
-export const selectloading = (state)=>state.loading
+export const selectval = (state)=>state.calculater.val
+export const selectloading = (state)=>state.calculater.loading
