@@ -25,7 +25,10 @@ export default function ChartPage() {
   }, [days])
 
   return (
-    <div className='text-white px-[135px] h-[400px] w-full'>
+    <div className='text-white px-[135px] h-[400px] w-full 2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px]'>
+      <div>
+        <p className='text-center  font-serif text-5xl mb-20 mt-10'><span className='text-[#00e3a5]'>Transactional </span>data</p>
+      </div>
       {load && <Line
         data={{
           labels: dataOfChart.prices.map((coin) => {
@@ -56,7 +59,7 @@ export default function ChartPage() {
         }}
       />}
       {!load && <div className='text-center h-[400px] flex justify-center items-center'><MoonLoader color="#00e3a5" size={40}/></div>}
-      <div className='flex space-x-5'>
+      <div className='flex space-x-5 justify-center mt-16 md:space-x-2 '>
         <button className={tab===1?activeClass:inActiveClass} onClick={() => {
           setdays(1)
           settab(1)

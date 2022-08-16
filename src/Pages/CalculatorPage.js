@@ -20,15 +20,15 @@ export default function CalculatorPage() {
 
 
     return (
-        <div className='text-white flex justify-between px-[300px] items-center mt-32'>
+        <div className='text-white flex justify-center space-x-[100px] items-center mt-32 xl:space-x-[60px] lg:space-x-[10px] md:flex-col md:space-y-8'>
             <div className='space-y-6'>
-                <p className='text-6xl'><span className='text-[#00e3a5]'>Calculate</span> Exchange</p>
-                <p className='text-6xl' >Rates Of your</p>
-                <p className='text-6xl'> currency</p>
+                <p className='text-6xl lg:text-4xl'><span className='text-[#00e3a5]'>Calculate</span> Exchange</p>
+                <p className='text-6xl lg:text-4xl ' >Rates Of your</p>
+                <p className='text-6xl lg:text-4xl '> currency</p>
             </div>
-            <div className='border-gray-500 border-r-[1px] h-[360px]'></div>
-            <div className='bg-gray-500 w-[380px] h-[400px] rounded-[20px] flex-col flex px-10 py-10'>
-                <p className='text-gray-800 font-semibold text-2xl mb-2'>Currency</p>
+            <div className='border-gray-500 border-r-[1px] h-[360px] md:hidden'></div>
+            <div className='bg-[#222222] w-[380px] h-[400px] rounded-[20px] flex-col flex px-10 py-10 shadow-xl md:w-[340px] '>
+                <p className='text-white font-semibold text-2xl mb-2'>Currency</p>
                 <select onChange={(e) => { setCurrency(e.target.value) }} className='  bg-gray-400 py-3 rounded px-1 text-gray-800 focus:outline-none mb-4'>
                     <option>Open menu</option>
                     {dataOfCurr.map((e,i) => {
@@ -37,14 +37,14 @@ export default function CalculatorPage() {
                         )
                     })}
                 </select>
-                <p className='text-gray-800 font-semibold text-2xl mb-2'>Value</p>
+                <p className='text-white font-semibold text-2xl mb-2'>Value</p>
                 <input value={valueCurr}
                     onChange={(e) => { setValueCurr(e.target.value) }}
                     className='text-black focus:outline-none mb-10 bg-gray-400 py-[12px] rounded px-3'
                     type='number'
                     min='0' />
                 {load && <p className='text-2xl text-center'><span className='text-gray-800 font-semibold'>Conversion:</span> {data}</p>}
-                {currency && valueCurr ? null : <p className='text-2xl text-gray-800 font-semibold text-center'>!!!Enter the  Values!!!</p>}
+                {/* {currency && valueCurr ? null : <p className='text-2xl text-white font-semibold text-center'>!!!Enter the  Values!!!</p>} */}
             </div>
         </div>
     )

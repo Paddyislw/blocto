@@ -8,8 +8,8 @@ export default function NavBar() {
     const [bg, setbg] = useState(true)
     const activeClass = 'text-xl text-[#00E3A5] cursor-pointer'
     const inactiveClass = 'text-xl text-white cursor-pointer'
-    const bgTran ='flex justify-between items-center text-white py-8 font-semibold  top-0 z-50 px-[135px] left-0 sticky  '
-    const bgGreen = 'flex justify-between items-center text-white py-8 font-semibold  top-0 z-50 bg-[#09251E] bg-opacity-100   px-[135px] left-0 sticky   '
+    const bgTran ='flex justify-between items-center text-white py-8 font-semibold  top-0 z-50 px-[135px] left-0 sticky 2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px] '
+    const bgGreen = 'flex justify-between items-center text-white py-8 font-semibold  top-0 z-50 bg-[#09251E] bg-opacity-100   px-[135px] left-0 sticky  2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px] '
     
     const bgChange = () =>{
         if (window.scrollY > 50){
@@ -25,7 +25,7 @@ export default function NavBar() {
             <div>
                 <p className='text-3xl '>Bloc<span className='text-[#00E3A5] bg-opacity-50'>To</span></p>
             </div>
-            <div className='flex items-center justify-between  space-x-16'>
+            <div className='flex items-center justify-between  space-x-16 lg:hidden'>
               <Link to='/'> <p className={tab===1?activeClass:inactiveClass} onClick={()=>{setTab(1)}}>Home</p> </Link> 
               <Link to='/calculator'> <p className={tab===2?activeClass:inactiveClass} onClick={()=>{setTab(2)}}>Calcultaor</p></Link> 
               <Link to='/chart'>  <p className={tab===3?activeClass:inactiveClass} onClick={()=>{setTab(3)}}>Chart</p></Link>

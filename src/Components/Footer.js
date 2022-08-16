@@ -5,9 +5,14 @@ import instagram from '../Media/instagram.png'
 
 export default function Footer() {
   return (
-    <div className='footer px-[200px] flex items-center py-20 mt-32 justify-between '>
+    <div className='footer px-[200px] flex items-center py-20 mt-32 justify-between 2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px] space-x-3 md:flex-col md:space-y-6'>
+
+
+
+      {/* 1st */}
+
       <div className=''>
-        <p className=' text-white text-5xl mb-6'>Bloc<span className='text-[#00E3A5]'>To</span></p>
+        <p className=' text-white text-5xl mb-6 lg:text-'>Bloc<span className='text-[#00E3A5]'>To</span></p>
         <div className='text-[#80AB9E] mb-8'>
           <p>A Lorem Ipsum is simply dummy text of the printing</p>
           <p>and typesetting industry. Lorem Ipsum has been</p>
@@ -22,15 +27,24 @@ export default function Footer() {
         </div>
         <p className='text-[#80AB9E]'>All rights reserved@2022</p>
       </div>
-      <div className='border-gray-500 border-r-[1px] h-[360px]'></div>
+
+
+      {/* 2nd */}
+      <div className='border-gray-500 border-r-[1px] h-[360px] md:hidden'></div>
+      <hr className='hidden md:block border-[1px] border-[#80AB9E] w-full' />
+
+
+
+      {/* 3rd */}
       <div className=''>
         <p className='text-5xl text-white mb-12'>NewsLetter</p>
         <div className='relative inline-block mb-12'>
-          <input className='border-[1px] border-[#00E3A5] bg-transparent px-3 py-2 rounded w-[450px]  text-white focus:outline-none' />
+          <input className='border-[1px] border-[#00E3A5] bg-transparent px-3 py-2 rounded w-[450px] lg:w-[350px]  text-white focus:outline-none' />
           <button className='absolute right-0 py-2 bg-[#00E3A5] top-[1px] w-28 rounded hover:text-white hover:border-[1px] hover:border-[#00E3A5] hover:bg-transparent'>Submit</button>
         </div>
-        <hr className='border-[1px] border-[#80AB9E] mb-12 w-[450px]' />
-        <div className='flex px-6 w-[450px] justify-between'>
+        <hr className='border-[1px] border-[#80AB9E] mb-12 w-[450px] lg:w-[350px]' />
+        
+        <div className='flex px-6 w-[450px] justify-between lg:w-[350px]'>
           <div className='text-[#80AB9E] space-y-2'>
             <p className='text-xl font-semibold text-white mb-4'>About Us</p>
             <p>Whitepaper</p>
@@ -45,6 +59,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+
     </div>
   )
 }
