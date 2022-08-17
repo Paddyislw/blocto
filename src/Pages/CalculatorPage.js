@@ -13,7 +13,7 @@ export default function CalculatorPage() {
     const [currency, setCurrency] = useState('')
     const [loading, setloading] = useState(true)
 
-
+    // called api to fetch on dependencies of value of currency and currency 
     useEffect(() => {
         dispatch(fetchDataForCalculator({ currency: currency, value: valueCurr }))
     }, [valueCurr, currency])
@@ -21,12 +21,20 @@ export default function CalculatorPage() {
 
     return (
         <div className='text-white flex justify-center space-x-[100px] items-center mt-32 xl:space-x-[60px] lg:space-x-[10px] md:flex-col md:space-y-8'>
+            {/* 1st div */}
+
+
             <div className='space-y-6'>
                 <p className='text-6xl lg:text-4xl'><span className='text-[#00e3a5]'>Calculate</span> Exchange</p>
                 <p className='text-6xl lg:text-4xl ' >Rates Of your</p>
                 <p className='text-6xl lg:text-4xl '> currency</p>
             </div>
+
+            {/* border div */}
             <div className='border-gray-500 border-r-[1px] h-[360px] md:hidden'></div>
+
+
+            {/* calculator div */}
             <div className='bg-[#222222] w-[380px] h-[400px] rounded-[20px] flex-col flex px-10 py-10 shadow-xl md:w-[340px] '>
                 <p className='text-white font-semibold text-2xl mb-2'>Currency</p>
                 <select onChange={(e) => { setCurrency(e.target.value) }} className='  bg-gray-400 py-3 rounded px-1 text-gray-800 focus:outline-none mb-4'>
@@ -44,7 +52,6 @@ export default function CalculatorPage() {
                     type='number'
                     min='0' />
                 {load && <p className='text-xl text-center'><span className='text-gray-400 font-semibold'>Conversion:</span> {data} <span className='text-[#00e3a5]'>BTC</span></p>}
-                {/* {currency && valueCurr ? null : <p className='text-2xl text-white font-semibold text-center'>!!!Enter the  Values!!!</p>} */}
             </div>
         </div>
     )

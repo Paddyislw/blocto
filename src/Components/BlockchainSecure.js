@@ -6,8 +6,8 @@ export default function BlockchainSecure() {
         <div className='mt-32'>
             <p className='  text-white text-4xl font-semibold'>Is <span className='text-[#00E3A5]'>Blockchain</span> secure ?</p>
             <div className='flex justify-between pt-10 items-center space-x-4 md:flex-col md:items-center'>
-                <div className='w-3/4 text-white text-xl bg-[#0c1311] flex flex-col  py-14 px-2 rounded-tr-[140px] rounded-br-[140px] pl-6 space-y-3 '>
-                    <p className='pr-4'>
+                <div className='w-3/4 text-white text-xl bg-[#081f19] flex flex-col  py-14 px-2 rounded-tr-[140px] rounded-br-[140px] pl-6 space-y-3 '>
+                    <p className='pr-4 leading-8'>
                         Blockchain technology achieves decentralized security and trust in several ways. To begin with, new blocks are always
                         stored linearly and chronologically. That is, they are always added to the “end” of the blockchain. After a block has
                         been added to the end of the blockchain, it is extremely difficult to go back and alter the contents of the block unless

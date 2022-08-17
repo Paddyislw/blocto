@@ -10,8 +10,9 @@ export default function NavBar() {
     const activeClass = 'text-xl text-[#00E3A5] cursor-pointer'
     const inactiveClass = 'text-xl text-white cursor-pointer hover:text-[#b1fae7]'
     const bgTran = 'flex justify-between items-center text-white py-8 font-semibold  top-0 z-50 px-[135px] left-0 sticky 2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px] '
-    const bgGreen = 'flex justify-between items-center text-white py-8 font-semibold  top-0 z-50 bg-[#09251E] bg-opacity-100   px-[135px] left-0 sticky  2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px] '
+    const bgGreen = 'flex justify-between items-center text-white py-8 font-semibold  top-0 z-50 bg-[#09251E] bg-opacity-100   px-[135px] left-0 sticky  2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px] shadow-xl '
 
+    // added logic for navbar on scrolling
     const bgChange = () => {
         if (window.scrollY > 50) {
             setbg(false)
@@ -20,6 +21,7 @@ export default function NavBar() {
             setbg(true)
         }
     }
+
     window.addEventListener('scroll', bgChange)
     return (
         <div className={bg ? bgTran : bgGreen} >
@@ -34,11 +36,14 @@ export default function NavBar() {
                 <Link to='/chart'>  <p className={tab === 3 ? activeClass : inactiveClass} onClick={() => { setTab(3) }}>Chart</p></Link>
             </div>
             <div className='hidden lg:block relative'>
+                {/* for big size screens */}
                 <button onClick={() => { settoggle(!toggle) }}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                         <path fill="none" d="M0 0h24v24H0z" /><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(255,255,255,1)" />
                     </svg>
                 </button>
+
+                {/* for small size screens */}
                 {toggle && <div className='bg-gray-500 w-[170px] h-[165px] absolute right-0 flex-col flex items-center rounded-xl py-3 space-y-6'>
                     <Link to='/'> <p className={tab === 1 ? activeClass : inactiveClass} onClick={() => { setTab(1) }}>Home</p> </Link>
                     <Link to='/calculator'> <p className={tab === 2 ? activeClass : inactiveClass} onClick={() => { setTab(2) }}>Calcultaor</p></Link>

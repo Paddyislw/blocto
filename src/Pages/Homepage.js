@@ -10,6 +10,7 @@ import WhatIsBlockchain from '../Components/WhatIsBlockchain'
 export default function Homepage() {
     return (
         <>
+        {/* all components to be displayed on homepage */}
             <div className='px-[135px] 2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px]'>
                 <HeroSec />
                 <WhatIsBlockchain />

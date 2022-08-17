@@ -20,6 +20,7 @@ export default function ChartPage() {
 
   const [tab, settab] = useState(1)
 
+  // called api to fetch on dependencies of days
   useEffect(() => {
     dispatch(fetchChartData(days))
   }, [days])
@@ -30,6 +31,9 @@ export default function ChartPage() {
         <p className='text-center  font-serif text-5xl mb-10 mt-10'><span className='text-[#00e3a5]'>Transactional </span>data</p>
       </div>
       <p className='text-center pb-5 text-gray-300 font-semibold'>Prices in USD</p>
+
+
+      {/* chart div which will render on getting the data */}
       {load && <Line
         data={{
           labels: dataOfChart.prices.map((coin) => {
@@ -59,7 +63,14 @@ export default function ChartPage() {
 
         }}
       />}
+
+
+
+      {/* spinner div  */}
       {!load && <div className='text-center h-[400px] flex justify-center items-center'><MoonLoader color="#00e3a5" size={40}/></div>}
+
+
+      {/* buttons div */}
       <div className='flex space-x-5 justify-center mt-16 md:space-x-2 '>
         <button className={tab===1?activeClass:inActiveClass} onClick={() => {
           setdays(1)

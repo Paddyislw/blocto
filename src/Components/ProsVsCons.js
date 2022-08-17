@@ -8,7 +8,7 @@ export default function ProsVsCons() {
 
         {/* pros */}
 
-        <div className='w-[520px] bg-[#0c1311] rounded-2xl shadow-lg lg:w-[360px]'>
+        <div className='w-[520px] bg-[#081f19] rounded-2xl shadow-lg lg:w-[360px]'>
           <p className='text-xl text-center text-[#00E3A5] my-6'>PROS</p>
           <hr className='mb-10 border-[1px] border-[#00E3A5] w-[450px]  mx-auto lg:w-[360px]' />
           <div className='text-white text-xl ml-4 space-y-16 pb-8'>
@@ -22,7 +22,7 @@ export default function ProsVsCons() {
 
         {/* cons */}
 
-        <div className='w-[520px] bg-[#0c1311] rounded-2xl shadow-lg lg:w-[360px]'>
+        <div className='w-[520px] bg-[#081f19] rounded-2xl shadow-lg lg:w-[360px]'>
           <p className='text-xl text-center text-[#00E3A5] my-6'>CONS</p>
           <hr className='mb-10 border-[1px] border-[#00E3A5] w-[450px]  mx-auto lg:w-[360px]' />
           <div className='text-white text-xl ml-4 space-y-16  pb-8'>
