@@ -8,7 +8,7 @@ export default function NavBar() {
     const [bg, setbg] = useState(true)
     const [toggle, settoggle] = useState(false)
     const activeClass = 'text-xl text-[#00E3A5] cursor-pointer'
-    const inactiveClass = 'text-xl text-white cursor-pointer'
+    const inactiveClass = 'text-xl text-white cursor-pointer hover:text-[#b1fae7]'
     const bgTran = 'flex justify-between items-center text-white py-8 font-semibold  top-0 z-50 px-[135px] left-0 sticky 2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px] '
     const bgGreen = 'flex justify-between items-center text-white py-8 font-semibold  top-0 z-50 bg-[#09251E] bg-opacity-100   px-[135px] left-0 sticky  2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px] '
 
@@ -25,7 +25,7 @@ export default function NavBar() {
         <div className={bg ? bgTran : bgGreen} >
             <Link to='/'>
                 <div>
-                    <p className='text-4xl'>Bloc<span className='text-[#00E3A5] bg-opacity-50'>To</span></p>
+                    <p className='text-4xl '>Bloc<span className='text-[#00E3A5] bg-opacity-50'>To</span></p>
                 </div>
             </Link>
             <div className='flex items-center justify-between  space-x-16 lg:hidden'>
