@@ -43,7 +43,7 @@ export default function CalculatorPage() {
                     className='text-black focus:outline-none mb-10 bg-gray-400 py-[12px] rounded px-3'
                     type='number'
                     min='0' />
-                {load && <p className='text-2xl text-center'><span className='text-gray-800 font-semibold'>Conversion:</span> {data}</p>}
+                {load && <p className='text-xl text-center'><span className='text-gray-400 font-semibold'>Conversion:</span> {data} <span className='text-[#00e3a5]'>BTC</span></p>}
                 {/* {currency && valueCurr ? null : <p className='text-2xl text-white font-semibold text-center'>!!!Enter the  Values!!!</p>} */}
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Line, Bar } from 'react-chartjs-2'
-import { Chart, CategoryScale, LinearScale, BarElement, PointElement, LineElement } from 'chart.js';
+import { Chart, CategoryScale, LinearScale, PointElement, LineElement} from 'chart.js';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { fetchChartData } from '../Features/ChartSlice';
@@ -8,15 +8,15 @@ import { selectDataChart, selectLoadChart } from '../Features/ChartSlice';
 import {MoonLoader} from 'react-spinners';
 
 export default function ChartPage() {
-  Chart.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement)
+  Chart.register(CategoryScale, LinearScale, PointElement, LineElement)
 
   const [days, setdays] = useState(1)
   const load = useSelector(selectLoadChart)
   const dataOfChart = useSelector(selectDataChart)
   const dispatch = useDispatch()
 
-  const activeClass = 'bg-[#00e3a5] text-black border-[1px] border-[#00e3a5] py-1 w-32 rounded'
-  const inActiveClass = 'border-[1px] border-[#00e3a5] py-1 w-32 rounded'
+  const activeClass = 'bg-[#00e3a5] text-black border-[1px] border-[#00e3a5] py-1 w-32 rounded font-semibold'
+  const inActiveClass = 'border-[1px] border-[#00e3a5] py-1 w-32 rounded font-semibold'
 
   const [tab, settab] = useState(1)
 
@@ -27,8 +27,9 @@ export default function ChartPage() {
   return (
     <div className='text-white px-[135px] h-[400px] w-full 2xl:px-[90px]  xl:px-[85px]  lg:px-[50px] md:px-[20px] sm:px-[10px]'>
       <div>
-        <p className='text-center  font-serif text-5xl mb-20 mt-10'><span className='text-[#00e3a5]'>Transactional </span>data</p>
+        <p className='text-center  font-serif text-5xl mb-10 mt-10'><span className='text-[#00e3a5]'>Transactional </span>data</p>
       </div>
+      <p className='text-center pb-5 text-gray-300 font-semibold'>Prices in USD</p>
       {load && <Line
         data={{
           labels: dataOfChart.prices.map((coin) => {
@@ -41,7 +42,7 @@ export default function ChartPage() {
           datasets: [
             {
               data: dataOfChart.prices.map((coin) => coin[1]),
-              label: `Price ( Past Days ) in USD`,
+              label: `Price in USD`,
               borderColor: "#00e3a5",
             },
           ]

@@ -10,12 +10,14 @@ export default function WhatIsBlockchain() {
             <p className='text-white text-4xl font-semibold'>What is <span className='text-[#00E3A5]'>Blockchain</span> ?</p>
             <div className='  my-10 rounded-[30px]  py-6 flex flex-col  space-y-20'>
 
-                <div className='flex items-center space-x-2 md:flex-col '>
+
+                {/* 1st */}
+                <div className='flex items-center space-x-2 md:flex-col justify-between'>
                     <img src={star} className='w-[120px] h-[120px] md:mb-6' />
-                    <div className='my-6 ml-auto bg-[#0c1311] rounded-tl-[140px] rounded-bl-[140px]  px-28 py-14 xl:px-16 lg:px-10'>
+                    <div className='my-6 ml-auto bg-[#0c1311] rounded-tl-[140px] rounded-bl-[140px]  px-28 py-14 xl:px-16 lg:px-10 w-4/5'>
                         <p className='text-[#00E3A5] text-2xl '>Defination</p>
                         <div className='text-white text-lg mt-3'>
-                            
+
                             <p>
                                 A blockchain is a distributed database or ledger that is shared among the nodes of a computer network.As a database, a blockchain stores
                                 information electronically in digital format. Blockchains are best known for their crucial role in cryptocurrency systems, such as Bitcoin,
@@ -26,9 +28,10 @@ export default function WhatIsBlockchain() {
                     </div>
                 </div>
 
-                <div className='flex items-center space-x-2 md:flex-col'>
+                {/* 2nd */}
+                <div className='flex items-center space-x-2 md:flex-col  justify-between'>
                     <img src={light} className='w-[120px] h-[120px] md:mb-6 ' />
-                    <div className='pb-16  ml-auto bg-[#0c1311] rounded-tl-[140px] rounded-bl-[140px] px-28 py-14 xl:px-16 lg:px-10'>
+                    <div className='pb-16 w-4/5 bg-[#0c1311] rounded-tl-[140px]  rounded-bl-[140px] px-28 py-14 xl:px-16 lg:px-10 '>
                         <p className='text-[#00E3A5] text-2xl '>Key Takeaways</p>
                         <ul className='text-white text-lg mt-6 space-y-2' >
                             <li><span className='text-[#00E3A5] mr-3'>1:</span>Blockchain is a type of shared database that differs from a typical database in the way that it stores information</li>
